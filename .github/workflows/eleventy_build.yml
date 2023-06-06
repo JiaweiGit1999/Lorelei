@@ -1,5 +1,7 @@
 name: Eleventy Build
 
+permissions:
+  contents: write
 
 on:
   push:
@@ -7,8 +9,6 @@ on:
       - main
       
 jobs:
-  permissions:
-      contents: write
   deploy:
     runs-on: ubuntu-latest
     steps:
