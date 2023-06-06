@@ -1,0 +1,174 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$bg-primary: #dddddd;
+$bg-secondary: #333333;
+$bg-tertiary: #ffffff;
+$host: "http://localhost:8080";
+
+* {
+    text-align: center;
+    color: $bg-primary !important;
+}
+@media (max-width: 640px) {
+    .post-container{
+        max-width: 96vw !important;
+    }
+    .sidebar{
+        display: none;
+    }
+    .row-post {
+        height: 10vh !important;
+    }
+    .post-header{
+        height: 10vh !important;
+    }
+
+    nav a{
+        width: 100%;
+    }
+    .post-title{
+        display: block !important;
+        bottom: 0 !important; 
+        opacity: 1 !important;
+        backdrop-filter: blur(1px);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+        font-size: 1.25rem;
+    }
+}
+a {
+    display: contents;
+}
+body{
+    background-image: url($host+"/src/img/bg.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+footer{
+    background-color: $bg-secondary;
+}
+header{
+    background-color: $bg-secondary;
+}
+p a{
+    color: blue !important;
+}
+.header-img{
+    background-image: url($host+"/src/img/nav-ground.png");
+    background-size: contain;
+    max-width: 100%;
+    max-height: 50px;
+    min-height: 25px;
+    position: relative;
+    height: 10vw;
+}
+.dino{
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.logo{
+    max-height: 50px;
+    max-width: 100px;
+    width: 100px;
+    height: 50%;
+    position: relative;
+    margin: 10px;
+}
+.post-container{
+    position: relative;
+    top: 2rem;
+    text-align: -webkit-center;
+    margin-bottom: 5rem;
+    max-width: 70vw;
+}
+
+.post{
+    background-color: $bg-tertiary;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.post:hover .post-title{
+    display: block;
+    animation: title-animation .5s forwards;
+}
+@keyframes title-animation {
+    from   {
+        bottom: -35px; 
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0));
+    }
+    to {
+        bottom: 0; 
+        opacity: 1;
+        backdrop-filter: blur(1px);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+    }
+  }
+.post-banner{
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0 0 10px 10px $bg-secondary inset;
+}
+.post-header{
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0 0 10px 10px $bg-secondary inset;
+    height: 30vh;
+    max-width: 100% !important;
+}
+
+.row-post{
+    height: 23vh;
+    max-height: 25vh;
+}
+.post-title{
+    position: absolute;
+    bottom: -35px;
+    display: none;
+    opacity: 0;
+    -webkit-text-stroke: 1px $bg-secondary;
+    margin: 0;
+}
+
+.post-content{
+    background-color: rgb(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.post-content *{
+    text-align: left;
+    padding: 1%;
+}
+.post-content p{
+    color: $bg-secondary!important;
+}
+
+.post-content h1{
+    text-align: center;
+}
+
+.post-content h1,h2{
+    background: #222;
+    color: $bg-tertiary !important;
+}
+
+.post-imgs{
+    position: relative;
+    width: 80%;
+}
+
+.sidebar{
+    position: fixed;
+    width: 13vw;
+    float: left;
+    z-index: 10;
+    background-color: $bg-secondary;
+    margin-top: 5vw;
+}

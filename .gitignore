@@ -1,0 +1,4 @@
+.env
+airflow
+node_modules
+_site
