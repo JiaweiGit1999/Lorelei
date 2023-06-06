@@ -2,3 +2,5 @@
 airflow
 node_modules
 _site
+gh-pages
+gh-pages.pub
